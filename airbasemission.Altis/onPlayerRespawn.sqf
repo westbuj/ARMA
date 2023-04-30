@@ -1,0 +1,1 @@
+[player] call JNN_fnc_attachTroopProvisioning; [player] call JNN_fnc_attachGroupProvisioning;[player] call JNN_fnc_attachMacroManager;

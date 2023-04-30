@@ -1,0 +1,49 @@
+faction_blufor_10_b_air_EXB_0   marketing for helicopter
+BIS_WL_Under_attack_WEST  womans voice, under attack
+Orange_Intro_Newsroom
+
+
+[5] spawn{
+_Music = "true" configClasses (configfile >> "cfgSounds" );//_Music = "true" configClasses (configfile >> "cfgMusic" );
+_Music = (_Music apply {configName _x});
+
+{
+	hint (_x );
+	playSound (_x);
+	sleep (_this select 0);
+
+
+}forEach _Music
+
+};
+
+HC_MOVE = [(_this select 3) select 0,screenToWorld [0.5, 0.5]];
+publicVariableServer "HC_MOVE";
+
+if (isNil "HC_MOVE") then { HC_MOVE = []; };
+
+"sub_m" addPublicVariableEventHandler {
+	
+	_p_s = [];
+
+	if (!isDedicated) then {
+//	hint format [			"%1 has been updated to: %2 - ok?",			_this select 0,			_this select 1	];	
+
+		{
+			
+			_id = (_x) select 0;
+			_sqName = (_x) select 2;
+			//HC_MOVE = [_id,screenToWorld [0.5, 0.5] ];
+			player addAction[ format["Move - %1",_sqName],"serverMoveGroup.sqf", [_id]];
+			
+			_p_s pushBack _id;
+	
+		}forEach (_this select 1);
+
+		player setVariable ["PSUBS",_p_s,false];
+
+		hint str (player getVariable "PSUBS");
+
+	};
+
+};

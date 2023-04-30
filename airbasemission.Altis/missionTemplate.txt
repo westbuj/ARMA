@@ -1,0 +1,36 @@
+[
+
+group leader,
+group name,
+leader Name,
+leader home position,
+Announce mission string,
+[
+	[support group1 unit, unit 2...],
+	[support group1 unit, unit 2...],
+	[support group1 unit, unit 2...],
+]
+
+[
+Support position,
+[supoprt vehicles],
+[support unints]
+[support Weapons
+]
+
+
+]
+
+[
+"C_Orestes",
+"The Lost Boys",
+"Orestes Smith",
+getPos spawnGang,
+"Warning: Insurgency detected",
+["C_man_p_beggar_F_euro","C_man_hunter_1_F"],["C_man_p_beggar_F_euro","C_man_hunter_1_F"],["C_scientist_F","C_man_hunter_1_F"]],
+[ 
+ getPos support1,["BG_Van_01_fuel_F"],["B_engineer_F"],["Box_NATO_Ammo_F"]],
+ (getPos support1 + [2,2,0]),["BG_Van_01_fuel_F"],["B_engineer_F"],["Box_NATO_Ammo_F"]],
+
+]
+]
