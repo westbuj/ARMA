@@ -1,0 +1,45 @@
+class Sentences
+{
+
+
+class objective_1
+{
+	text = "Move down the road.";
+	speech[] = {"\sound\kitty_intersection_1.ogg"};
+	actor = "messanger";
+	varient = "";
+	variantText="";
+	class Arguments{};
+};
+
+
+
+class objective_2
+{
+	text = "The train wreck is just ahead. See CMD Scott when you arrive at the wreck.";
+	speech[] = {"\sound\trainWreck.ogg"};
+	actor = "worker_1";
+	varient = "";
+	variantText="";
+	class Arguments{};
+};
+
+
+
+class objective_3
+{
+	text = "";
+	speech[] = {"\sound\proceed.ogg"};
+	actor = "commander_scott";
+	varient = "";
+	variantText="";
+	class Arguments{};
+};
+
+
+
+};
+class Arguments{};
+class Special{};
+startWithVocal[] = {hour};
+startWithConsonant[] = {europe, university};

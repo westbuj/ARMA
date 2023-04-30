@@ -1,0 +1,110 @@
+author = "Jack North"; // Author
+onLoadName = "ZED Alert"; // Mission name (temporary solution; actual name set in editor will be used later in the alpha)
+onLoadMission = "The fate of the world is in your hands."; // Description
+loadScreen = "loadScreen_ca.paa"; // Preview picture
+class Header
+{
+	gameType = Coop; // MP mission type
+};
+
+
+
+
+
+
+class CfgSounds
+{
+	sounds[] = {};
+
+	
+class Music_1
+	{
+		// display name
+		name	= "Music_1";
+
+		// filename, volume, pitch
+		sound[]	= { "sound\strangeIntro.ogg", db + 0, 1.0 };
+// subtitle delay in seconds, subtitle text
+		titles[] = {  };
+
+
+	};
+
+class Music_2
+	{
+		// display name
+		name	= "Music_2";
+
+		// filename, volume, pitch
+		sound[]	= { "sound\movinon.ogg", db + 0, 1.0 };
+// subtitle delay in seconds, subtitle text
+		titles[] = {  };
+
+
+	};
+
+	class saferInJail
+	{
+		// how the sound is referred to in the editor (e.g. trigger effects)
+		name = "TestBriefing";
+
+		// filename, volume, pitch, distance (optional)
+		sound[] = { "sound\saferInJail.ogg", 1, 1, 100 };
+
+		// subtitle delay in seconds, subtitle text
+		titles[] = {  };
+	};
+
+	class drunk_prisoner
+	{
+		// how the sound is referred to in the editor (e.g. trigger effects)
+		name = "TrainWreckBriefing";
+
+		// filename, volume, pitch, distance (optional)
+		sound[] = { "sound\drunkTank.ogg", 1, 1, 100 };
+
+		// subtitle delay in seconds, subtitle text
+		titles[] = {  };
+	};
+
+
+class seeTheCommander
+	{
+		// how the sound is referred to in the editor (e.g. trigger effects)
+		name = "TrainWreckBriefing";
+
+		// filename, volume, pitch, distance (optional)
+		sound[] = { "sound\seeTheCommander.ogg", 1, 1, 100 };
+
+		// subtitle delay in seconds, subtitle text
+		titles[] = { 1, "*Commander is briefing*" };
+	};
+
+class getWeapons
+	{
+		// how the sound is referred to in the editor (e.g. trigger effects)
+		name = "getWeapons";
+
+		// filename, volume, pitch, distance (optional)
+		sound[] = { "sound\getWeapons.ogg", 1, 1, 100 };
+
+		// subtitle delay in seconds, subtitle text
+		titles[] = {  };
+	};
+
+class commanderMessage
+	{
+		// how the sound is referred to in the editor (e.g. trigger effects)
+		name = "commanderMessage";
+
+		// filename, volume, pitch, distance (optional)
+		sound[] = { "sound\CMDtrainwreck.ogg", 1, 1, 100 };
+
+		// subtitle delay in seconds, subtitle text
+		titles[] = {  };
+	};
+
+	
+};
+
+

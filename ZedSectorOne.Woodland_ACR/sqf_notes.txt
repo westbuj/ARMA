@@ -1,0 +1,33 @@
+_done = taskCompleted "someTask";
+
+// are players in the vehicle
+
+_crew1 = [];
+_airframe1 = [];
+_heli = objNull;
+
+if (isServer) then {
+
+_crew1 = creategroup WEST; 
+_airframe1 = [getMarkerPos "pickup_spawn", markerDir "pickup_spawn", "B_Heli_Transport_01_F", _crew1] call BIS_fnc_spawnVehicle;
+_heli = _airframe1 select 0;
+_wp1 = _crew1 addWaypoint [(getmarkerpos "pickup"), 0];
+_wp1 setWaypointType "LOAD";
+_wp1 setWaypointSpeed "FAST";
+_wp1 setwaypointstatements ["true", "(vehicle this) LAND 'GET IN';"];
+
+waitUntil {sleep 3;(count (allplayers select {alive _x})) isEqualTo (count (allplayers select {_x in _heli}))};
+
+_wp2 = _crew1 addWaypoint [(getmarkerpos "pickup_spawn"), 100];
+_wp2 setWaypointType "MOVE";
+_wp2 setWaypointSpeed "FAST";
+
+}; 
+
+
+all player that are alive, are in said vehicle.
+{alive _x} count (allPlayers  ) == {alive _x && _x in truck1} count (allPlayers )  && ({alive _x} count allPlayers) > 0
+
+
+add a smoke bomb
+_smoke  = "SmokeShellRed" createVehicle (getMarkerPos "camera_start_xz");

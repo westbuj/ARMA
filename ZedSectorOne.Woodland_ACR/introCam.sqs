@@ -1,0 +1,64 @@
+;=== Create Camera Start
+_camera = "camera" camcreate position player;
+_camera cameraeffect ["internal","back"]
+;=== Create Camera End
+
+;=== Intro Start
+
+
+;comment "Camera Preload Position" ["Woodland_ACR",[2210.34,4351.57,2.02917],255.962,0.75,[-17.5692,0],0,0,600.773,0.15,0,1,0,1];
+
+
+_camera camPrepareTarget drunk_in_jail;
+_camera camPreparePos [2210.34,4351.57,2.02917];
+_camera camPrepareFOV 0.700;
+_camera camCommitPrepared 0
+@camCommitted _camera
+
+~2
+
+
+
+;comment "Camera 1st Position";
+;comment ["Woodland_ACR",[2213.57,4353.52,1.36296],217.526,0.75,[-3.10387,0],0,0,600.462,0.15,0,1,0,1]
+
+_camera camPrepareTarget drunk_in_jail;
+_camera camPreparePos [2213.57,4353.52,1.36296];
+_camera camPrepareFOV 0.700;
+_camera camCommitPrepared 10
+@camCommitted _camera
+
+~2
+
+;comment "Camera I am the sherrif here" ["Woodland_ACR",[2214.11,4352.39,1.04652],256.306,0.75,[-1.50719,0],0,0,600.829,0.15,0,1,0,1];
+
+_camera camPrepareTarget sherrif;
+_camera camPreparePos [2214.11,4352.39,1.04652];
+_camera camPrepareFOV 0.700;
+_camera camCommitPrepared 3
+@camCommitted _camera
+
+~2
+
+;comment "Camera 2nd DOT HEY Position" ["Woodland_ACR",[2211.69,4350.6,1.98035],155.754,0.75,[-5.75542,0],0,0,600.69,0.15,0,1,0,1];
+_camera camPrepareTarget sherrif;
+_camera camPreparePos [2211.69,4350.6,1.98035];
+_camera camPrepareFOV 0.700;
+_camera camCommitPrepared 3
+@camCommitted _camera
+
+~6
+
+;comment "Camera 2nd Position";
+;comment ["Woodland_ACR",[2214.27,4351.31,1.36497],249.232,0.75,[-1.05841,0],0,0,600.462,0.15,0,1,0,1]
+
+_camera camPrepareTarget sherrif;
+_camera camPreparePos [2214.27,4351.31,1.36497];
+_camera camPrepareFOV 0.700;
+_camera camCommitPrepared 7
+@camCommitted _camera
+
+~10
+
+player cameraEffect ["terminate","back"]
+camDestroy _camera
