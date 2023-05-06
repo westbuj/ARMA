@@ -1,0 +1,28 @@
+
+
+//////////////////////////////////////////////////////////    		Base defines for dialog boxes
+
+#include "fn_locations\defines.hpp"
+#include "fn_locations\ctrl_defines.hpp"
+
+///////////////////////////////////////////////////////////////		END    Base defines for dialog boxes
+     
+
+///////////////////////////////////////////////////////////////		Helper functions
+class cfgFunctions{
+#include "fn_locations\cfgfunctions.hpp"
+}; 
+
+///////////////////////////////////////////////////////////////		END Helper functions
+
+
+///////////////////////////////////////////////////////////////		Dialogs
+//Include dialogs here
+#include "fn_locations\troopProvision_DIAG.hpp"
+#include "fn_locations\groupSpawn_DIAG.hpp" 
+#include "fn_locations\microManager_DIAG.hpp" 
+#include "fn_locations\macroManager_DIAG.hpp" 
+#include "fn_locations\reportingManager_DIAG.hpp"
+
+///////////////////////////////////////////////////////////////		END Dialogs
+   
